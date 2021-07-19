@@ -1,0 +1,2 @@
+rootProject.name = "CalcY"
+include ':app'

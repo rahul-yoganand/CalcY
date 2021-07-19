@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <string name="howdy">नमस्ते</string>
+    <string name="enter_username">नाम</string>
+    <string name="enter_password">पासवर्ड</string>
+    <string name="login">लॉगइन</string>
+    <string name="login_success">लॉग इन सफल</string>
+    <string name="login_fail">सही विवरण दर्ज करें</string>
+    <string name="one">१</string>
+    <string name="two">२</string>
+    <string name="three">३</string>
+    <string name="four">४</string>
+    <string name="five">५</string>
+    <string name="six">६</string>
+    <string name="seven">७</string>
+    <string name="eight">८</string>
+    <string name="nine">९</string>
+    <string name="zero">०</string>
+    <string name="del">हटाना</string>
+    <string name="c">मिटाना</string>
+    <string name="syntax_error">ग़लती</string>
+</resources>
