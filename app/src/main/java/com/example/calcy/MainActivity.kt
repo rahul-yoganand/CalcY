@@ -27,7 +27,17 @@ class MainActivity : AppCompatActivity() {
             Toast.makeText(this,R.string.login_success,Toast.LENGTH_SHORT).show()
             startActivity(cintent)
         }else {
-            Toast.makeText(this,R.string.login_fail,Toast.LENGTH_LONG).show()
+            if(username.text.toString()!="admin" ){
+                username.requestFocus()
+                username.selectAll()
+                Toast.makeText(this,"Incorrect Username",Toast.LENGTH_LONG).show()
+            }
+            if(passwd.text.toString()!="admin" ){
+                passwd.requestFocus()
+                passwd.selectAll()
+                Toast.makeText(this,"Inccorect Password",Toast.LENGTH_LONG).show()
+            }
+
         }
 
     }
