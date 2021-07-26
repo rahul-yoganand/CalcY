@@ -15,19 +15,19 @@
         android:maxLines="1"
         android:text="@string/zero"
         android:textColor="@color/white"
-        android:textSize="60sp"
+        android:textSize="40sp"
         android:textAlignment="textEnd"
         android:gravity="center_vertical"
         />
     <TextView
         android:id="@+id/answer"
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="80dp"
         android:textColor="@color/white"
         android:maxLength="10"
-        android:textSize="60sp"
+        android:textSize="40sp"
         android:textAlignment="textEnd"
-        android:layout_marginBottom="10dp"/>
+        android:layout_marginBottom="5dp"/>
     <LinearLayout
         android:layout_gravity="bottom"
         android:layout_width="match_parent"
@@ -123,6 +123,17 @@
             <Button style="@style/operations"
                 android:id="@+id/tvEqual"
                 android:text="=" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:orientation="horizontal"
+            android:layout_marginBottom="5dp">
+            <Button style="@style/operations"
+                android:id="@+id/history"
+                android:text="History"
+                android:onClick="history"/>
+
         </LinearLayout>
 
     </LinearLayout>

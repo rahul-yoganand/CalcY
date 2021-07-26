@@ -1,5 +1,6 @@
 package com.example.calcy
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -10,6 +11,7 @@ import net.objecthunter.exp4j.ExpressionBuilder
 
 lateinit var displayVal: TextView
 lateinit var displayRes:TextView
+var data= arrayListOf<String>()
 
 class calculator : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -60,10 +62,12 @@ class calculator : AppCompatActivity() {
             expr=expr.dropLast(1)
             displayVal.setText(expr)
         } }
-        clr.setOnClickListener(){expr=""
-        displayRes.setText(R.string.zero)
-        displayVal.setText(R.string.zero)}
-        eval.setOnClickListener(){ evalExpr(expr) }
+        clr.setOnClickListener(){
+            expr=""
+            displayRes.setText(R.string.zero)
+            displayVal.setText(R.string.zero)}
+        eval.setOnClickListener(){ evalExpr(expr)
+            data.add(displayVal.text.toString()+"="+ displayRes.text.toString())}
 
 
 
@@ -92,6 +96,13 @@ class calculator : AppCompatActivity() {
         var tempexpr =expr + s
         displayVal.setText(tempexpr)
         return tempexpr
+    }
+
+    fun history(view: View) {
+        val intent = Intent(this,History::class.java).apply {
+            intent.putExtra("userHistory",data)
+        }
+        startActivity(intent)
     }
 
 
